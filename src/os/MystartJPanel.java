@@ -20,7 +20,7 @@ public class MystartJPanel extends JPanel implements Runnable {
 			g.setColor(Color.red);
 			Font f=new Font("华文新魏",Font.BOLD,30);
 			g.setFont(f);
-			g.drawString("模拟生产自行车工厂", 250,200);
+			g.drawString("模拟生产自行车工厂", 140,200);
 		}
 	}
 

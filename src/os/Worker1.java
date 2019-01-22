@@ -15,8 +15,8 @@ public class Worker1 implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		while(Main.flag) {
-			if(Main.back_control) {
+		while(Main.back_control) {
+			if(Main.flag) {
 				for(int i=0;i<speed;i++)
 					try {
 						box1.put();
@@ -26,6 +26,14 @@ public class Worker1 implements Runnable{
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+			}else {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			}
 			
 		}

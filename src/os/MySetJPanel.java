@@ -2,6 +2,10 @@ package os;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -212,6 +216,32 @@ class MySetJPanel extends JPanel{
 				jtf_worker2num.setText("");
 				jtf_worker3num.setText("");
 				jtf_carriernum.setText("");
+				
+				
+				
+				
+				
+				File f=new File("Data.txt");
+				FileWriter fw=null;
+				try {
+					
+					fw=new FileWriter(f);
+					//操作有问题
+					fw.write("Data.frame:"+Data.frame+"\r\n");
+					fw.write("Data.wheel:"+Data.wheel+"\r\n");
+					fw.write("Data.bicycle:"+Data.bicycle+"\r\n");
+					
+				}catch(Exception e) {
+					e.printStackTrace();
+				}finally {
+					try {
+						fw.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
 				
 				
 				//清除后端的数据

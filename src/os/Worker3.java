@@ -19,9 +19,9 @@ public class Worker3 implements Runnable {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		while(Main.flag) {
+		while(Main.back_control) {
 			
-			if(Main.back_control) {
+			if(Main.flag) {
 				
 				try {
 					for(int i=0;i<speed;i++)
@@ -38,6 +38,13 @@ public class Worker3 implements Runnable {
 					e.printStackTrace();
 				}
 				
+			}else {
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 	}
